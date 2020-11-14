@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Redux Fundamentals
+https://redux.js.org/tutorials/fundamentals/part-1-overview
 
-## Available Scripts
+## Part1: Redux Overview
+### What is Redux?
+- a pattern and library for managing and updating application state, using events called 'actions'
+- a centralized store for state that needs to be used across your entire application, with rules ensuring that the state can only be udpated in a predictable fashion
 
-In the project directory, you can run:
+### Why use Redux?
+- to manage 'global state' - state that is needed across many parts of your application
 
-### `npm start`
+### When use Redux?
+- you have large amounts of application state that are needed in many places in the app
+- the app state is updated frequently over time
+- the logic to update that state may be complex
+- the app has a medium or large-sized codebase(the complete body of source code for a given software programm or application), and might be worked on by many people 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Redux Libraries and Tools
+#### Redux 
+- a small standalone JS library, commonly used with several other packages
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### React-Redux
+- an official package that lets your React components interact with a Redux store by reading pieces of state and dispatching actions to update the store
 
-### `npm test`
+#### Redux Toolkit
+- a toolkit that contains packages and functions that are essential for building a Redux app (a recommended approach by the official)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Redux DevTools Extension
+- the extension that shows a history of the changes to the state in your Redux store over time
+- allows you to debug your applications effectively, including using techniques like 'time-travel debugging'
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Redux Basics
+#### The Redux _Store_
+- a container taht holds your application's global state 
+- a JavaScript objecct with a few special functions and abilities that are different than a plain glboal object:
+    * never directly modify or change the state that is kept inside the Redux store
+    * update the state by creating a plain _action_ object that describes 'something that happened in the application', and then _dispatch_ the action to the store to tell it what happened
+    * when an action is dispatched, the store runs the root _reducer_ function, and lets it calculate the new state based on the old state and the action
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Part2: Redux Concepts and Data Flow
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Part3: State, Actions, Reducers
