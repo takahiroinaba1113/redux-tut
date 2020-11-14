@@ -143,6 +143,61 @@ document
 
 
 ## Part2: Redux Concepts and Data Flow
+https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
 
 
-## Part3: State, Actions, Reducers
+### Background Concepts
+#### State Management
+
+```JavaScript
+// State: a counter value
+function Counter() {
+  const [counter, setCounter] = useState(0);
+
+// Action: code that causes an update to the state when something happnes
+  const increment = () => {
+    setCounter(prevCounter => prevCounter + 1);
+  }
+
+// View: the UI definition
+  return (
+    <div>
+      Value: {counter} 
+      <button onClick={increment} > Increment </button>
+    </div>
+  )
+}
+```
+
+It is a self-contained app with the following parts:
+- State: the source that drives the app
+- View: a declarative description of the UI based on the current state
+- Actions: the events that occur in the app based on user input, and trigger updates in the state
+
+This is __'one-way data flow'__:
+- State describes the conditon of the app at a specific point in time
+- The UI is rendered based on that state
+- When something happens (such as a user clicking a button), the state is updated based on what occurred
+- The UI re-renders based on the new state
+-> this simplicity can break down when multiple components need to share and use the same state, and they may be located in different parts of the application
+
+Solution? one way to solve this is to extract the shared state from the components, and put it into a centralized location outside the component tree. With this, the component tree becomes a big 'view', and any component can access the state or trigger actions, no matter where they are in the tree.
+-> this is the basic idea behind Redux: a single centralized place to contain the global state in the application, and specific patterns to follow when updating that state to make the code predictable. 
+
+#### Immutability
+Redux expects that all state updates are done __immutably__. So update will be done by copying the existing object and modifying the copied one. 
+
+### Redux Terminology
+#### Actions
+#### Reducers
+#### Store
+#### Dispatch
+#### Selectors
+
+### Core Concepts and Principlestion
+#### Single Source of Truth
+#### State is Read-Only
+#### Changes are Made with Pure Reducer Functions
+
+### Redux Application Data Flow
+### Summary
