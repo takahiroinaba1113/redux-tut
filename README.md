@@ -31,12 +31,12 @@ https://redux.js.org/tutorials/fundamentals/part-1-overview
 
 
 ### Redux Basics
-#### The Redux **Store**
+#### The Redux __Store__
 - a container taht holds your application's global state 
 - a JavaScript objecct with a few special functions and abilities that are different than a plain glboal object:
     * never directly modify or change the state that is kept inside the Redux store
-    * update the state by creating a plain _action_ object that describes 'something that happened in the application', and then _dispatch_ the action to the store to tell it what happened
-    * when an action is dispatched, the store runs the root _reducer_ function, and lets it calculate the new state based on the old state and the action
+    * update the state by creating a plain __action__ object that describes 'something that happened in the application', and then _dispatch_ the action to the store to tell it what happened
+    * when an action is dispatched, the store runs the root __reducer__ function, and lets it calculate the new state based on the old state and the action
 
 ## Part2: Redux Concepts and Data Flow
 
