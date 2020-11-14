@@ -31,7 +31,7 @@ https://redux.js.org/tutorials/fundamentals/part-1-overview
 
 
 ### Redux Basics
-#### The Redux _Store_
+#### The Redux *Store*
 - a container taht holds your application's global state 
 - a JavaScript objecct with a few special functions and abilities that are different than a plain glboal object:
     * never directly modify or change the state that is kept inside the Redux store
