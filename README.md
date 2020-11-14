@@ -135,6 +135,12 @@ document
 3. state is updated by the store with the new value
 4. UI is updated
 
+### Summary
+#### - Redux: a library for managing global application state with several types of code
+- _Actions_: plain objects with a type field, and describe 'what happened' in the app
+- _Reducers_: functions that calculate a new state value based on previous state + an action
+- _Store_: runs the root reducer whenever an action is _dispatched_
+
 
 ## Part2: Redux Concepts and Data Flow
 
