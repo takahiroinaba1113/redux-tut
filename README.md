@@ -299,4 +299,6 @@ console.log(currentValue);
   * reducer functions to update the state in response to actions
 - 'one-way data flow' app structure
   * state -> something happened -> dispatches an action -> store runs reducers & update the state -> notifies the UI that the state has changed -> UIs re-rendered based on the new state
-  
+
+  ## Redux Fundamentals, Part 3: State, Actions, and Reducers
+  https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
